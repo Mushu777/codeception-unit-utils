@@ -40,7 +40,7 @@ if ($options['h'] === false) {
     exit(0);
 }
 
-require_once '../vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $workDirectory = rtrim(realpath($options['w'] ?: getcwd()), '\\/');
 $finder        = new TestMethodsFinder(new ComposerManager($workDirectory), new SourceFilter($options['f'], false));
